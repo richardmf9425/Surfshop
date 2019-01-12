@@ -1,3 +1,4 @@
+require('dotenv').config(); //invoke .env file after installing devdependecy
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
