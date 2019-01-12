@@ -6,7 +6,7 @@ const {
   getLogout
 } = require('../controllers'); // same as /controllers/index it pulls out index.js by default
 const {
-  errorHandler
+  asyncErrorHandler
 } = require('../middleware'); //middleware/index
 
 /* GET home page. */
@@ -22,7 +22,7 @@ router.get('/register', (req, res, next) => {
 });
 
 /* POST /register */
-router.post('/register', errorHandler(postRegister));
+router.post('/register', asyncErrorHandler(postRegister));
 
 /* GET /login */
 router.get('/login', (req, res, next) => {
